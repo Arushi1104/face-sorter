@@ -1,16 +1,42 @@
-# React + Vite
+# Face Sorter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A privacy-first web app that groups people in your photos by face, lets you filter by person, and downloads matching photos as a ZIP — all running entirely in your browser. No data is uploaded or stored anywhere.
 
-Currently, two official plugins are available:
+## What it does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Upload multiple photos at once
+- Automatically detects and groups faces by person
+- Shows each person ranked by number of appearances
+- Filter photos by selecting one or more people (OR / AND mode)
+- Download filtered photos as a ZIP file
 
-## React Compiler
+## How it works
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Face detection and recognition runs locally in your browser using [face-api.js](https://github.com/justadudewhohacks/face-api.js), powered by TensorFlow.js. Your photos never leave your device.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React + Vite
+- face-api.js (TinyFaceDetector + FaceRecognitionNet)
+- JSZip + file-saver
+- Deployed on Vercel
+
+## Running locally
+
+```bash
+git clone https://github.com/YOUR_USERNAME/face-sorter.git
+cd face-sorter
+npm install
+npm run dev
+```
+
+## Limitations
+
+- Works best with clear, reasonably sized faces
+- Processing time increases with number of photos
+- Very small or obscured faces may not be detected
+- No identity recognition — people are grouped by similarity, not named
+
+## Live Demo
+
+[face-sorter.vercel.app](https://face-sorter.vercel.app)

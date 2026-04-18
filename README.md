@@ -17,7 +17,7 @@ Face detection and recognition runs locally in your browser using [face-api.js](
 ## Tech Stack
 
 - React + Vite
-- face-api.js (TinyFaceDetector + FaceRecognitionNet)
+- face-api.js (SSD MobileNetV1 + FaceLandmark68Net + FaceRecognitionNet)
 - JSZip + file-saver
 - Deployed on Vercel
 
@@ -39,4 +39,5 @@ npm run dev
 
 ## Live Demo
 
-[face-sorter.vercel.app](https://face-sorter.vercel.app)
+[face-sorter-ruby.vercel.app](https://face-sorter-ruby.vercel.app)
+

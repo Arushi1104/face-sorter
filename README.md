@@ -24,7 +24,7 @@ Face detection and recognition runs locally in your browser using [face-api.js](
 ## Running locally
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/face-sorter.git
+git clone https://github.com/Arushi1104/face-sorter.git
 cd face-sorter
 npm install
 npm run dev

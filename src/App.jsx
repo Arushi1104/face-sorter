@@ -102,9 +102,28 @@ export default function App() {
       margin: '0 auto',
     }}>
       <h1 style={{ fontSize: '1.8rem', marginBottom: '4px' }}>Face Sorter</h1>
-      <p style={{ color: '#888', marginBottom: '32px', marginTop: 0 }}>
-      Upload photos — group, filter & download by person. Nothing is stored or sent anywhere. Processing may take a moment depending on the number of photos.
+      <p style={{ color: '#888', marginBottom: '8px', marginTop: 0 }}>
+      Face Sorter scans your photos locally, groups faces by person, and lets you download only the photos you want — no data is uploaded or stored anywhere.
       </p>
+
+      <div style={{
+        background: '#1a1a1a',
+        border: '1px solid #2a2a2a',
+        borderRadius: '10px',
+        padding: '14px 18px',
+        marginBottom: '28px',
+        fontSize: '0.85rem',
+        color: '#aaa',
+        lineHeight: '1.8',
+      }}>
+        <strong style={{ color: '#ddd' }}>How to use:</strong>
+        <ol style={{ margin: '6px 0 0 16px', padding: 0 }}>
+          <li>Upload one or more photos using the box below</li>
+          <li>Wait for faces to be detected and grouped by person</li>
+          <li>Select the people you want to filter by</li>
+          <li>Choose OR (any selected person) or AND (all together), then download your ZIP</li>
+        </ol>
+      </div>
 
       <Upload
         onPhotosSelected={handlePhotosSelected}
